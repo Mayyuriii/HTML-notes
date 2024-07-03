@@ -1,0 +1,216 @@
+1. Introduction to HTML
+HTML (HyperText Markup Language) is the standard markup language used to create web pages. HTML elements are represented by tags.
+
+2. Basic Structure of an HTML Document
+An HTML document has a specific structure that includes several required.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Title</title>
+</head>
+<body>
+    <!-- Content goes here -->
+</body>
+</html>
+
+<!DOCTYPE html>: Declares the document type and version of HTML.
+<html>: The root element of an HTML page.
+<head>: Contains meta-information about the HTML document (e.g., title, meta tags, links to stylesheets).
+<title>: Specifies the title of the document, shown in the browser's title bar or tab.
+<body>: Contains the content of the HTML document (e.g., text, images, links).
+
+3. Common HTML Tags
+Headings: Define HTML headings from level 1 to 6.
+
+<h1>This is a heading</h1>
+<h2>This is a heading</h2>
+<h3>This is a heading</h3>
+<h4>This is a heading</h4>
+<h5>This is a heading</h5>
+<h6>This is a heading</h6>
+
+Paragraph: Represents a paragraph of text.
+<p>This is a paragraph.</p>
+
+Links: Create hyperlinks.
+<a href="https://www.cricket.com/">This is a link</a>
+
+Images: Embed images.
+<img src="image.jpg" alt="Description of the image">
+
+Lists: Create ordered (numbered) and unordered (bulleted) lists.
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<ol>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ol>
+
+Tables: Define tables.
+<table>
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+    </tr>
+</table>
+
+Forms: Create forms for user input.
+<form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <input type="submit" value="Submit">
+</form>
+
+4. HTML Attributes
+Attributes provide additional information about HTML elements and are always included in the opening tag.
+
+href: Specifies the URL for a link.
+src: Specifies the source of an image.
+alt: Provides alternative text for an image.
+id: Specifies a unique id for an element.
+class: Specifies one or more class names for an element.
+style: Specifies inline CSS styles.
+Example:
+<a href="https://www.example.com" id="example-link" class="link-class" style="color: red;">This is a styled link</a>
+
+5. Semantic HTML
+Semantic HTML elements clearly describe their meaning in a human- and machine-readable way.
+
+<header>: Represents a container for introductory content or navigation links.
+<nav>: Defines a set of navigation links.
+<main>: Specifies the main content of a document.
+<section>: Represents a section of content.
+<article>: Represents an independent piece of content.
+<aside>: Defines content aside from the content it is placed in.
+<footer>: Represents a footer for a document or section.
+Example:
+
+<header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Section Title</h2>
+        <p>Section content...</p>
+    </section>
+    <article>
+        <h2>Article Title</h2>
+        <p>Article content...</p>
+    </article>
+</main>
+
+<aside>
+    <h2>Related</h2>
+    <p>Related content...</p>
+</aside>
+
+<footer>
+    <p>Footer content...</p>
+</footer>
+
+6. HTML Forms and Inputs
+HTML forms are used to collect user input. Form elements include text fields, checkboxes, radio buttons, submit buttons, etc.
+
+Example:
+
+<form action="/submit-form" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    
+    <label for="newsletter">Subscribe to newsletter:</label>
+    <input type="checkbox" id="newsletter" name="newsletter">
+    
+    <input type="submit" value="Submit">
+</form>
+
+
+Tips for Writing HTML
+Always use lowercase for element names and attributes.
+Always close HTML tags.
+Indent nested elements to improve readability.
+Use comments (<!-- Comment -->) to annotate your code.
+Example Project
+Here’s an example of a complete HTML document with various elements:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sample Website</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>This is the home section.</p>
+        </section>
+        
+        <section id="about">
+            <h2>About</h2>
+            <p>This is the about section.</p>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="/submit-form" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Related</h2>
+        <p>Related content goes here.</p>
+    </aside>
+
+    <footer>
+        <p>Footer content goes here.</p>
+    </footer>
+</body>
+</html>
